@@ -1,11 +1,11 @@
-console.log('Trabalhando com variaveis');
+//console.log('Trabalhando com variaveis');
 /*JS e case sensitive*/
 
-idade = 29;
+//dade = 29;
 
 
-console.log(Idade)
-console.log(Idade)   
+//console.log(Idade)
+//console.log(Idade)   
 
 
 
@@ -15,3 +15,11 @@ mes = 'janeiro'
 
 
 */
+
+
+
+
+let idade;
+idade = 26;
+idade = idade+1;
+console.log(idade);
