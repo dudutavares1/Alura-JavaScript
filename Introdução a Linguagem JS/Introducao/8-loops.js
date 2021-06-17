@@ -48,3 +48,20 @@ for (let cont = 0 ;contador < 3 ; cont++){
     }
     contador += 1;
 }  
+
+ /*
+ O que aprendemos nessa aula:
+
+While;
+
+Break;
+
+Usando o Debbuger do VS Cde;
+
+Entendendo o fluxo de execução do código;
+
+configurando o debbuger do VSCode;
+
+For Loop;
+
+*/
