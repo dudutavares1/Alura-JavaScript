@@ -1,48 +1,44 @@
 var titulo = document.querySelector("[data-titulo]");
 titulo.textContent = "Skynet Nutricionista";
-var paciente1 = document.querySelector("[data-paciente1]")
 
-var pesoPaciente1 = document.querySelector("[data-info-peso1]")
-var peso = pesoPaciente1.textContent
-
-var alturaPaciente1 = document.querySelector("[data-info-altura1]")
-var altura = alturaPaciente1.textContent
-
-var tdIMC = document.querySelector("[data-info-imc1]")
-
-tdIMC.textContent = imc
-
-var alturaEhValido = true
-var pesoEhValido = true
+var pacientes = document.querySelectorAll(".paciente");
 
 
-if (peso <= 0 || peso >= 200) {
-    console.log("Peso invalido")
-    var pesoEhValido = false
-    tdIMC.textContent = "Peso invalido"
+
+for (var i = 0; i < pacientes.length; i++) {
+    var paciente = pacientes[i]
+
+
+
+    var tdPeso = paciente.querySelector(".info-peso");
+    var peso = tdPeso.textContent;
+
+    var tdAltura = paciente.querySelector(".info-altura");
+    var altura = tdAltura.textContent;
+
+    var tdImc = paciente.querySelector(".info-imc");
+
+    var pesoEhValido = true;
+    var alturaEhValida = true;
+
+    if (peso <= 0 || peso >= 1000) {
+        console.log("Peso inválido!");
+        pesoEhValido = false;
+        tdImc.textContent = "Peso inválido";
+        paciente.classList.add("paciente-invalido");
+    }
+
+    if (altura <= 0 || altura >= 3.00) {
+        console.log("Altura inválida!");
+        alturaEhValida = false;
+        tdImc.textContent = "Altura inválida";
+        paciente.classList.add("paciente-invalido");
+    }
+
+    var imc = peso / (altura * altura);
+    tdImc.textContent = imc.toFixed(2);
+
+
 }
-
-if (altura <= 0 || altura >= 3.00) {
-    console.log("Altura invalida")
-    var alturaEhValido = false
-    tdIMC.textContent = "Altura invalida"
-}
-
-if (alturaEhValido && pesoEhValido) {
-    var imc = peso / (altura * altura)
-    tdIMC.textContent = imc
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
