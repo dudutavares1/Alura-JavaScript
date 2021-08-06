@@ -1,10 +1,8 @@
-function soma (numero1, numero2){
-    return numero1 + numero2
+function minhaFuncao(param) {
+    minhaFuncao('param')
 }
 
 
-function multiplica (numero1, numero2){
-    return numero1 * numero2
-}
 
-console.log(soma(5, 6), soma (10, 11))
+const soma = function (num1, num2) { return num1 + num2 }
+console.log(soma(1, 2));
