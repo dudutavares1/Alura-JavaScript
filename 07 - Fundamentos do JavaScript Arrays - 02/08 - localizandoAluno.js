@@ -6,8 +6,8 @@ let listaDeNotasEAlunos = [alunos, mediasDosAlunos]
 
 const exibeNomeNota = (nomeDoAluno) => {
     if (listaDeNotasEAlunos[0].includes(nomeDoAluno)) {
-        indice = listaDeNotasEAlunos[0].indexOf(nomeDoAluno)
-        return listaDeNotasEAlunos[0][indice] + ',sua media e: ' + listaDeNotasEAlunos[1][indice]
+       let indice = listaDeNotasEAlunos[0].indexOf(nomeDoAluno)
+        return listaDeNotasEAlunos[0][indice] + ', sua media e: ' + listaDeNotasEAlunos[1][indice]
         
 
     } else {
