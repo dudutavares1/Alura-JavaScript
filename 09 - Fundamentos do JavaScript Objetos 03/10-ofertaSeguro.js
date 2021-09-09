@@ -26,18 +26,19 @@ const cliente = {
 }
 
 
-let relatorio = ''
 
-for (let info in cliente) {
-    if (typeof cliente[info] === 'object' || typeof cliente[info] === 'function') {
-        continue;
-
-    } else {
-        relatorio += `
-         ${info} ==> ${cliente[info]}
-         `
+function oferecerSeguro(obj) {
+    const propsClientes = Object.keys(obj)
+    if(propsClientes.includes('dependentes'))
+    { 
+        console.log(`Oferta de Seguro de Vida para ${obj.nome}`)
     }
 
 }
 
-console.log(relatorio)
+
+console.log(Object.entries(cliente))
+console.log(Object.values(cliente))
+oferecerSeguro(cliente)
+
+
